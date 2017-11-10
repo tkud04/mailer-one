@@ -1,12 +1,8 @@
 @extends('layout') 
 
-@section('title', "Welcome")
+@section('title', "Home")
 
-@section('header') 
-@include("header")
-@stop
 @section('content')        
-
 <div class="container-fluid">
   <div class="row">
   	<div class="col-lg-12 col-xs-12">
