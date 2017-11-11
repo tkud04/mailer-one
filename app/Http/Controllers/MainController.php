@@ -42,7 +42,7 @@ class MainController extends Controller {
           
           $validator = Validator::make($req, [
                              'title' => 'required',
-                             'leads' => 'required|email',                               
+                             'leads' => 'required',                               
                              'content' => 'required',
                    ]);    
 
@@ -61,13 +61,10 @@ class MainController extends Controller {
                      $title = $req["title"];
                      $leads = $req["leads"];
                      $content = $req["content"];
-                     print_r($leads);
+                     echo "leads has ".count($leads)." elements";
                      #$this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');        
                      # echo $lead;
-                  }                     
-           
-         
-           
+                  }                               
 	}
 	
 
