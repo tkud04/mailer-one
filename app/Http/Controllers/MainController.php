@@ -61,7 +61,7 @@ class MainController extends Controller {
                      $title = $req["title"];
                      $leads = $req["leads"];
                      $content = $req["content"];
-                     dd($leads);
+                     print_r($leads);
                      #$this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');        
                      # echo $lead;
                   }                     

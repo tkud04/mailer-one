@@ -59,7 +59,7 @@
    beforeSend: function()
    { 
     $("#error").fadeOut();
-    $("#working").html('<br><br><img class="img img-responsive" src="img/loading.gif" alt="Sending emails, please wait.. "><br>Sending emails, please wait.... </strong>');
+    $("#working").html('<br><br><img class="img img-responsive" src="{{asset('img/loading.gif')}}" alt="Sending emails, please wait.. "><br>Sending emails, please wait.... </strong>');
    },
    success :  function(response)
       {        
