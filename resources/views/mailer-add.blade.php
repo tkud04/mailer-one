@@ -31,8 +31,8 @@
   <div class="row">
   	<div class="col-lg-12 col-xs-12">
   	  <center> 
-           <div id="error" class="alert alert-danger"></div><br><br>
-           <div id="working"></div>
+           <div id="working"></div><br><br>
+           <div id="response"></div>
         </center>
       </div>
   </div><br>
