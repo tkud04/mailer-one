@@ -41,13 +41,16 @@
              var mailInterval;
              
              if(leads.length >= 1){
-             	foreach(leads as lead){
-                     if(count >= leads.length){alert("Sending Complete"); window.clearInterval(mailInterval);}
+             	leads.forEach(function(lead){
+                     if(count >= leads.length){
+                        alert("Sending Complete");
+                        window.clearInterval(mailInterval);
+                     }
                      else{
                        count++;
-                       sendMail(leads[count],t,c);
+                       sendMail(lead,t,c);
                     } 
-                 } 
+                 });
              }
           }
           
