@@ -42,7 +42,7 @@ class MainController extends Controller {
           
           $validator = Validator::make($req, [
                              'title' => 'required',
-                             'lead' => 'required|email',                               
+                             'leads' => 'required|email',                               
                              'content' => 'required',
                    ]);    
 
@@ -59,10 +59,11 @@ class MainController extends Controller {
                  else
                  {                 	
                      $title = $req["title"];
-                     $lead = $req["lead"];
+                     $leads = $req["leads"];
                      $content = $req["content"];
-                     $this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');        
-                      echo $lead;
+                     dd($leads);
+                     #$this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');        
+                     # echo $lead;
                   }                     
            
          

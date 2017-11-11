@@ -41,16 +41,7 @@
              var mailInterval;
              
              if(leads.length >= 1){
-             	leads.forEach(function(lead){
-                     if(count >= leads.length){
-                        alert("Sending Complete");
-                        window.clearInterval(mailInterval);
-                     }
-                     else{
-                       count++;
-                       sendMail(lead,t,c);
-                    } 
-                 });
+             	sendMail(leads,t,c);
              }
           }
           
@@ -59,9 +50,7 @@
     });
     
     function sendMail(ld,title,content){
-        mailInterval = window.setInterval(function(){
-           // alert("send each mail every 10 seconds");
-           data = {"lead": ld, "title": title,"content": content};
+        data = {"leads": ld, "title": title,"content": content};
            $.ajax({
     
    type : 'POST',
@@ -70,19 +59,13 @@
    beforeSend: function()
    { 
     $("#error").fadeOut();
-    $("#working").html('<br><br><img class="img img-responsive" src="" alt="Sending emails, please wait.. "><br>Validating Your Data.... </strong>');
+    $("#working").html('<br><br><img class="img img-responsive" src="img/loading.gif" alt="Sending emails, please wait.. "><br>Sending emails, please wait.... </strong>');
    },
    success :  function(response)
-      {      
-        $('#response-div').addClass("alert").addClass("alert-danger");
-        $('#response-div').html(response);
-  
-     old = $("#response").html();
-      $("#response").html(old + '<br><p>Email sent to ' + response + '</p>');     
+      {        
+      $("#response").html(response);     
      }
    });
-           
-         },10000);
          return false;            
     } 
 </script>
