@@ -50,7 +50,7 @@
     });
     
     function sendMail(ld,title,content){
-        data = {"_token": "{{csrf_token()}}, "leads": ld, "title": title,"content": content};
+        data = {"_token": "{{csrf_token()}}", "leads": ld, "title": title,"content": content};
            $.ajax({
     
    type : 'POST',
