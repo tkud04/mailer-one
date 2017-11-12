@@ -37,6 +37,7 @@ class MainController extends Controller {
 	 */
 	public function postSend(Request $request)
 	{
+		   set_time_limit(0);
            $req = $request->all();
           #dd($req);
           
