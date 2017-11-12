@@ -63,8 +63,9 @@
    },
    success :  function(response)
       {        
-        alert(response);
-      //$("#response").html(response);     
+        //alert(response);
+        $("#working").fadeOut();
+      $("#response").html(response);     
      }
    });
          return false;            

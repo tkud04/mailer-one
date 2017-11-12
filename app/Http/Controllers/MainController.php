@@ -62,8 +62,19 @@ class MainController extends Controller {
                      $leads = $req["leads"];
                      $content = $req["content"];
                      return "leads has ".count($leads)." elements";
-                     #$this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');        
-                     # echo $lead;
+                     $ret = "";
+                     
+                     if(count($leads) > 0)
+                     {
+                     	foreach($leads as $lead)
+                         {
+                         	$this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');
+                             $ret.= "<h3 class='text-success'><i class='fa fa-paper-plane'></i> Message sent to $lead successfully</h3><br>";
+                             sleep(10);
+                         }
+                     	
+                     }
+                     return $ret;                     
                   }                               
 	}
 	
