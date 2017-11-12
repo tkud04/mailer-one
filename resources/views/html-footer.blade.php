@@ -63,7 +63,8 @@
    },
    success :  function(response)
       {        
-      $("#response").html(response);     
+        alert(response);
+      //$("#response").html(response);     
      }
    });
          return false;            

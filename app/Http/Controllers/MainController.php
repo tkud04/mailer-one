@@ -61,7 +61,7 @@ class MainController extends Controller {
                      $title = $req["title"];
                      $leads = $req["leads"];
                      $content = $req["content"];
-                     echo "leads has ".count($leads)." elements";
+                     return "leads has ".count($leads)." elements";
                      #$this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');        
                      # echo $lead;
                   }                               
