@@ -61,7 +61,7 @@ class MainController extends Controller {
                      $title = $req["title"];
                      $leads = $req["leads"];
                      $content = $req["content"];
-                     return "leads has ".count($leads)." elements";
+                    # return "leads has ".count($leads)." elements";
                      $ret = "";
                      
                      if(count($leads) > 0)
