@@ -70,7 +70,7 @@ class MainController extends Controller {
                          {
                          	$this->helpers->sendEmail($lead,$title,['content' => $content],'emails.bomb','view');
                              $ret.= "<h3 class='text-success'><i class='fa fa-paper-plane'></i> Message sent to $lead successfully</h3><br>";
-                             sleep(1500);
+                             sleep(500);
                          }
                      	
                      }
