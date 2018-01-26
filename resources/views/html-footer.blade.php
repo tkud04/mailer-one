@@ -25,6 +25,8 @@
  
     $(document).ready(function() {
     	l = ""; t = ""; c = "";
+        $('#content').richText();
+        
     	$('#sendFormSubmit').click(function(e){
           l = $('#leads').val();
           t = $('#title').val();
