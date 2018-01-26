@@ -14,6 +14,7 @@
 <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('css/style.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('css/font-awesome.css')}}" rel="stylesheet" type="text/css">
+<link href="{{asset('css/richtext.min.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('css/responsive.css')}}" rel="stylesheet" type="text/css">
 <link href="{{asset('css/animate.css')}}" rel="stylesheet" type="text/css">
 
