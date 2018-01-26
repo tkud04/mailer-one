@@ -63,7 +63,7 @@
    { 
     $("#error").fadeOut();
     $("#response").fadeOut();
-    $("#working").html('<br><br><img class="img img-responsive" src="{{asset('img/loading.gif')}}" alt="Sending emails, please wait.. "><br>Sending emails, please wait.... </strong>');
+    $("#working").html('<br><br><img class="img img-responsive" src="{{asset('img/loading.gif')}}" alt="Sending emails, please wait.. " width="150" height="150"><br>Sending emails, please wait.... </strong>');
    },
    success :  function(response)
       {        
